@@ -6,13 +6,15 @@ var alphabet = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 function stackLetters() {
   var letters = '';
+  var counter = 1;
   for (var i = 0; i < alphabet.length; i++) {
     letters += alphabet[ i ]
-    if ( ( letters.length % 5 ) === 0 ) {
+    if ( counter === 5 ) {
       letters += ' ';
+      counter = 0;
     }
+    counter++
     console.log( letters );
-    console.log( "Letters length is:" + letters.length );
   }
 }
 
